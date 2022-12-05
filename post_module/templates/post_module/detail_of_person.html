@@ -1,0 +1,61 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+
+
+{% block title %}
+    detail {{ post.name }}
+{% endblock %}
+
+{% block header_references %}
+    <link rel="stylesheet" href="{% static 'post_module/list_of_person.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container d-flex flex-wrap" id="containerdetail">
+        <div class="col-md-12">
+            <h2 class="mt-5"></h2>
+        </div>
+        <hr>
+        <div class="col-md-6 col-sm-12 col-12 col-lg-6" id="detail">
+            <div class="mt-5">
+                <h3 class="mt-3 name-size">{{ post.name|title }} </h3>
+                <h4 class="profession-size">{{ post.profession }}</h4>
+                <h4 class="age-size">age : {{ post.age }}</h4>
+                <p class="email-size">{{ post.email }}</p>
+            </div>
+
+            <hr>
+            <div class="d-flex my-2">
+                <h3>{{ post.description }}</h3>
+            </div>
+
+        </div>
+        <div class="col-md-6 col-sm-12 col-12 col-lg-6 bg-light">
+            {% if post.image %}
+                <img src="{{ post.image.url }}" alt="profile" class=" rounded w-100">
+            {% else %}
+                <img src="{% static 'images/user.png' %}" alt="profile" class="img-top w-100">
+            {% endif %}
+        </div>
+        <hr class="w-75">
+
+    </div>
+
+    {% if related_posts %}
+        <hr>
+        <div class="d-flex align-items-center justify-content-center">
+            <h3 class="m-auto text-black-50">related</h3>
+        </div>
+    {% endif %}
+
+    <div class="related_posts">
+        {% for post in related_posts %}
+            <a href="{{ post.get_absolute_url }}">
+                {% include 'post_module/includes/post_item_partial.html' with post=post %}
+            </a>
+        {% endfor %}
+
+    </div>
+
+
+{% endblock %}

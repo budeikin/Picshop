@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user</OriginalElement>
+  <nodes>
+    <node x="0.0" y="836.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.site_module_sitesetting</node>
+    <node x="627.15625" y="274.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.auth_permission</node>
+    <node x="327.3985085120273" y="153.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user</node>
+    <node x="239.0" y="836.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.contact_module_contactus</node>
+    <node x="1135.5" y="173.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.post_module_post</node>
+    <node x="269.0" y="1114.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.thumbnail_kvstore</node>
+    <node x="476.0" y="1114.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.sqlite_sequence</node>
+    <node x="265.50000000000006" y="635.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user_user_permissions</node>
+    <node x="501.0" y="836.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.sqlite_master</node>
+    <node x="842.5" y="635.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.auth_group_permissions</node>
+    <node x="671.0" y="836.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.django_migrations</node>
+    <node x="587.5" y="635.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user_groups</node>
+    <node x="878.0" y="836.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.add_post_module_addpost</node>
+    <node x="1103.5" y="368.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.post_module_postcomment</node>
+    <node x="1114.5" y="0.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.post_module_profession</node>
+    <node x="0.0" y="1114.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.contact_module_userprofile</node>
+    <node x="1138.0" y="836.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.django_session</node>
+    <node x="342.53125000000006" y="0.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.django_content_type</node>
+    <node x="55.50000000000006" y="580.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.django_admin_log</node>
+    <node x="881.625" y="296.0">ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.auth_group</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.auth_group_permissions" target="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.auth_permission" relationship="REFERENCES">
+      <point x="-50.0" y="-50.5" />
+      <point x="892.5" y="549.0" />
+      <point x="708.15625" y="549.0" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.django_admin_log" target="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user" relationship="REFERENCES">
+      <point x="47.5" y="-105.5" />
+      <point x="198.00000000000006" y="559.0" />
+      <point x="428.3985085120273" y="559.0" />
+      <point x="0.0" y="182.5" />
+    </edge>
+    <edge source="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user_groups" target="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="58.75" y="-50.5" />
+      <point x="763.75" y="539.0" />
+      <point x="948.625" y="539.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user_user_permissions" target="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.auth_permission" relationship="REFERENCES">
+      <point x="75.49999999999994" y="-50.5" />
+      <point x="492.0" y="549.0" />
+      <point x="708.15625" y="549.0" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.post_module_post" target="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.post_module_profession" relationship="REFERENCES">
+      <point x="0.0" y="-72.5" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.django_admin_log" target="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="-47.5" y="-105.5" />
+      <point x="103.00000000000006" y="559.0" />
+      <point x="145.50000000000006" y="559.0" />
+      <point x="145.50000000000006" y="127.0" />
+      <point x="431.53125000000006" y="127.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.post_module_postcomment" target="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.post_module_post" relationship="REFERENCES">
+      <point x="0.0" y="-72.5" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.auth_group_permissions" target="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="50.0" y="-50.5" />
+      <point x="992.5" y="539.0" />
+      <point x="948.625" y="539.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user_groups" target="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user" relationship="REFERENCES">
+      <point x="-58.75" y="-50.5" />
+      <point x="646.25" y="559.0" />
+      <point x="428.3985085120273" y="559.0" />
+      <point x="0.0" y="182.5" />
+    </edge>
+    <edge source="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.auth_permission" target="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="0.0" y="-61.5" />
+      <point x="708.15625" y="127.0" />
+      <point x="431.53125000000006" y="127.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user_user_permissions" target="ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user" relationship="REFERENCES">
+      <point x="-75.50000000000006" y="-50.5" />
+      <point x="341.0" y="559.0" />
+      <point x="428.3985085120273" y="559.0" />
+      <point x="0.0" y="182.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.1794205052005944" showDependencies="false" x="471.5072084354344" y="642.6475530283841" />
+  <SelectedNodes>
+    <node>ef150158-74d4-4ef7-af76-404792cdab33.TABLE:main.account_module_user</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

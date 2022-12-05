@@ -1,0 +1,20 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+{% block content %}
+    <hr>
+    <h3 class="mt-5 text-black-50 f-flex flex-wrap justify-content-center">Search Results</h3>
+    <hr>
+    {% if object_list %}
+        <ul class="listofartists">
+            {% for post in object_list %}
+                <a href="{{ post.get_absolute_url }}">
+                    {% include 'post_module/includes/post_item_partial.html' with post=post %}
+                </a>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div class="alert alert-warning">
+            <h5>No results found </h5>
+        </div>
+    {% endif %}
+{% endblock %}

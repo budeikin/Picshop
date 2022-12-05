@@ -1,0 +1,41 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+{% block title %}
+    Register
+{% endblock %}
+
+{% block header_references %}
+    <link rel="stylesheet" href="{% static 'account_module/login.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="col-md-12 my-5"></div>
+    <hr>
+    <div class="container" id="loginbox">
+        <div class="col-md-12 d-flex justify-content-center" id="login">
+            <div class="col-md-6 shadow-lg rounded mt-6 d-flex flex-column justify-content-center">
+                <h3 class="p-3 align-self-center">Welcome Aboard</h3>
+                <p>An email will be sent to you after entering the fields
+                    Click on the link inside to register your account</p>
+                <hr>
+                <form action="{% url 'register_page' %}" method="post">
+                    {% csrf_token %}
+                    {{ register_form.email.label_tag }}
+                    {{ register_form.email }}
+                    {{ register_form.email.errors }}
+
+                    {{ register_form.password.label_tag }}
+                    {{ register_form.password }}
+                    {{ register_form.password.errors }}
+
+                    {{ register_form.confirm_password.label_tag }}
+                    {{ register_form.confirm_password }}
+                    {{ register_form.confirm_password.errors }}
+
+                    <input type="submit" class="btn btn-primary btn-block p-2 my-5" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,153 @@
+/* Extra small devices (phones, 600px and down) */
+
+@media (max-width: 600px) {
+    .brand {
+        display: none;
+    }
+    .navbar-brand {
+        margin-left: 0.8rem;
+    }
+    #searchli {
+        display: none;
+    }
+    #moreInformation {
+        margin-top: 70px;
+    }
+    #moreInformation {
+        margin-left: 19px;
+    }
+    #moreInformation p {
+        font-size: 1.3rem;
+    }
+    #findphotographerh1 {
+        font-size: 1.8rem;
+        display: flex;
+        margin: auto;
+    }
+    .thanks,
+    .see-cv,
+    #findphotographerh1 {
+        text-align: center;
+    }
+    .thanks {
+        font-size: 1.8rem;
+    }
+    .see-cv {
+        font-size: 1rem;
+    }
+    .nav-item {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.541);
+    }
+    #aboutusPicture {
+        display: none;
+    }
+    #containerpost {
+        flex-direction: column;
+    }
+    .fa-search {
+        margin-left: 1.3rem;
+    }
+    #usericon {
+        margin-left: -1.4rem;
+    }
+    #login {
+        margin-top: 2rem;
+    }
+    #containerdetail {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #containerdetail img {
+        width: 100%;
+    }
+    #meet{
+        font-size: revert;
+    }
+    .thanks{
+        text-align: center;
+        color: floralwhite;
+    }
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .picshop {
+        display: none;
+    }
+    .navbar-brand {
+        margin: auto;
+    }
+    #searchli {
+        display: none;
+    }
+    #moreInformation {
+        margin-left: 19px;
+    }
+    #moreInformation p {
+        font-size: 1.3rem;
+    }
+    #moreInformation {
+        margin-top: 70px;
+    }
+    .fa-search {
+        margin-left: 1.4rem;
+    }
+    #login {
+        margin-top: 3rem;
+    }
+    .card {
+        width: 100%
+    }
+    /* .nav-item {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.541);
+    } */
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    a.nav-link {
+        font-size: .8rem;
+    }
+    #join {
+        display: flex;
+        flex-direction: column;
+    }
+    #findphotographerh1 {
+        width: 80%;
+        font-size: 2rem;
+    }
+    #moreInformation {
+        margin-top: 70px;
+    }
+    #login {
+        margin-top: 3rem;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .picshop {
+        display: list-item;
+    }
+    /*.nav-link {*/
+    /*    color: #0c5460;*/
+    /*}*/
+    .navbar-brand {
+        display: none;
+    }
+    #login {
+        margin-top: 7rem;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {}

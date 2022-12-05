@@ -1,0 +1,60 @@
+/* header */
+
+a.nav-link,
+a.navbar-brand {
+    color: rgb(255, 255, 255);
+    transition: all ease .3s;
+}
+
+a.nav-link:hover,
+a.navbar-brand:hover {
+    color: rgb(255, 255, 255);
+    transition: all ease .3s;
+}
+
+div.collapse {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.fa-search {
+    text-decoration: none;
+}
+
+.meet {
+    margin: auto;
+}
+
+#meet {
+    text-align: center;
+}
+
+
+/* main */
+
+.firstsection {
+    margin: 0 auto;
+}
+
+.see-cv {
+    width: fit-content;
+    margin: auto;
+}
+
+#plus {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+}
+
+/* footer */
+
+footer {
+    margin-bottom: 0px;
+}

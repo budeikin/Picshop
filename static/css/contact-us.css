@@ -1,0 +1,9 @@
+textarea {
+    resize: none;
+}
+
+.errorlist{
+    color: #ff1919; !important;
+    list-style: none; !important;
+    margin-left: 0;
+}

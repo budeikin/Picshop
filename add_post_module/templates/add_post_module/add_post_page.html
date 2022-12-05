@@ -1,0 +1,28 @@
+{% extends 'shared/layout.html' %}
+{% load render_partial %}
+{% load static %}
+
+{% block title %}
+    Add Post
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="clearfix my-5"></div>
+        <div>
+            <h4 class="mt-5 p-4">
+                you should enter all of fieds to add your post
+            </h4>
+        </div>
+        <hr>
+        <div class="col-md-12 d-flex">
+            <div class="col-md-6 d-flex justify-content-center">
+                <form method="post" action="{% url 'add_post_page' %}" enctype="multipart/form-data" >
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary btn-block mb-5" value="Submit">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+<header class="bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md bg-dark container">
+        <!-- <a href="#searchbox" class="d-lg-none d-md-none"><span class="fas fa-search text-white"></span></a> -->
+        <a href="{% url 'main_page' %}" class="navbar-brand d-md-none">Picshop</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"
+                id="menuicon">
+            <span class="text-white-50 pull-right">Menu</span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+            <ul class="navbar-nav">
+                <li class="nav-item mx-2 d-sm-none d-none d-md-inline"><a href="{% url 'main_page' %}"
+                                                                          class="nav-link brand">Picshop</a></li>
+                <li class="nav-item mx-2"><a href="{% url 'main_page' %}" class="nav-link">Home</a></li>
+                <li class="nav-item mx-2"><a href="{% url 'list_of_persons' %}" class="nav-link">Persons</a></li>
+                <li class="nav-item mx-2"><a href="{% url 'about_page' %}" class="nav-link">About-Us</a></li>
+                <li class="nav-item mx-2"><a href="{% url 'contact_us_form' %}" class="nav-link">Contact-Us</a></li>
+
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <li class="nav-item mx-2"><a href="/admin" class="nav-link picshop">Admin</a></li>
+                    {% endif %}
+                    <li class="nav-item mx-2"><a href="{% url 'user_panel_dashboard' %}" class="nav-link picshop">Profile</a>
+                    </li>
+                    <li class="nav-item mx-2"><a href="{% url 'logout_page' %}" class="nav-link picshop">Logout</a></li>
+                {% else %}
+                    <li class="nav-item mx-2"><a href="{% url 'register_page' %}" class="nav-link picshop">Create
+                        Account</a></li>
+                    <li class="nav-item mx-2"><a href="{% url 'login_page' %}" class="nav-link picshop">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+</header>

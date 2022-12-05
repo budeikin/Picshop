@@ -1,0 +1,24 @@
+ul,li {
+    list-style: none;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#listofartists{
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: -30px;
+}
+#containerdetail{
+    margin-top: 6rem;
+}
+
+.nav-item,.nav-link{
+    color: #0c5460;
+}

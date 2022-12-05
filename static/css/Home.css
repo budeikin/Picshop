@@ -1,0 +1,57 @@
+/* header */
+a.nav-link,
+a.navbar-brand {
+    color: rgb(225, 225, 225);
+    transition: all ease .3s;
+}
+
+a.nav-link {
+    font-size: 0.5rem;
+}
+
+a.nav-link:hover,
+a.navbar-brand:hover {
+    color: rgb(255, 255, 255);
+    transition: all ease .3s;
+}
+
+div.collapse {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.fa-search {
+    text-decoration: none;
+}
+
+.meet {
+    margin: auto;
+}
+
+#meet {
+    text-align: center;
+}
+
+
+/* main */
+
+.firstsection {
+    margin: 0 auto;
+}
+
+.see-cv {
+    width: fit-content;
+    margin: auto;
+}
+
+/*footer*/
+footer {
+    bottom: 0;
+    margin-bottom: 0;
+}

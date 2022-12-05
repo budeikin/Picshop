@@ -1,0 +1,13 @@
+<div class="container d-flex flex-column">
+    <div class="clearfix">
+        <hr>
+    </div>
+
+    <div class="col-md-12 d-flex flex-wrap justify-content-center">
+        {% for profession in professions %}
+            <li class="m-auto text-black-50 p-3 rounded">
+                <a href="{% url 'list_of_professions' pro=profession.title_url %}" class="text-black-50">{{ profession.title }}</a>
+            </li>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,36 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+{% load render_partial %}
+{% block title %}
+    List of Artists
+{% endblock %}
+
+{{% block header_references %}
+    <link rel="stylesheet" href="{% static 'post_module/list_of_person.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="clearfix my-5"></div>
+    {% render_partial 'post_module.views.profession_categories_component' %}
+
+    <hr>
+    <section>
+
+        <div class="">
+            <ul id="listofartists">
+                {% for post in posts %}
+                    <a href="{{ post.get_absolute_url }}">
+                        {% include 'post_module/includes/post_item_partial.html' with post=post %}
+                    </a>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'add_post_page' %}" id="plus" class="fixed-bottom mb-5 p-2 p-lg-5 mr-1">
+            <img src="{% static 'home_module/images/vector61-714-01.jpg' %}" alt="pic" width="50" height="50"
+                 class="rounded-circle shadow"
+                 title="Add">
+        </a>
+    {% endif %}
+{% endblock %}

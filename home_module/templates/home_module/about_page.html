@@ -1,0 +1,29 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+{% load render_partial %}
+{% block title %}
+    Abous Us
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>
+            About us
+        </h2>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="col-md-12">
+            about picshop
+        </div>
+        <div class="col-md-6">
+            <h3 class="p-3 mt-4 mb-3">Picshop is a site introducing artists and athletes
+                you can make your account in this site and post your resumes</h3>
+        </div>
+        <div class="col-md-6 pull-right mb-5">
+            <img src="../../../static/images/aboutuspicture1.jpg" class="mb-5 w-100" alt="logo">
+        </div>
+    </div>
+    <div class="clearfix mt-5"></div>
+
+{% endblock %}

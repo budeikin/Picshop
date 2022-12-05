@@ -1,0 +1,51 @@
+{% extends 'shared/layout.html' %}
+{% load render_partial %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <div class="clearfix">{#for make a space#}</div>
+    <hr>
+    {# main #}
+    <div class="clearfix">
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            {# links #}
+            <div class="col-md-4">
+                {% if user.avatar %}
+                    <img class="d-flex my-3 mx-auto rounded-circle" src="{{ user.avatar.url }}" width="130px"
+                         height="130px" alt="avatar">
+                {% else %}
+                    <img class="d-flex my-3 mx-auto rounded-circle" src="/static/images/user.png" width="130px"
+                         height="130px" alt="profile">
+                {% endif %}
+                {% render_partial 'user_panel_module.views.user_panel_menu_component' %}
+
+            </div>
+            {# links #}
+
+            {# panel #}
+            <div class="col-md-8 pull-right">
+                <div class="clearfix m-3"></div>
+                {% if user.first_name %}
+                    <h3>{{ user.first_name }}</h3>
+                {% endif %}
+                <hr>
+                {% if user.last_name %}
+                    <h3>{{ user.last_name }}</h3>
+                {% endif %}
+                <hr>
+                {% if user.address %}
+                    <h3><span class=""></span>{{ user.address }}</h3>
+                {% endif %}
+            </div>
+            {# panel #}
+            <hr>
+        </div>
+    </div>
+    {# main #}
+{% endblock %}

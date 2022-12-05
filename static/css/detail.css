@@ -1,0 +1,7 @@
+.post:hover {
+    cursor: zoom-in;
+}
+
+.post {
+    width: fit-content;
+}

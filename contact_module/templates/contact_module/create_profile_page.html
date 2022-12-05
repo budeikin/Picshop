@@ -1,0 +1,29 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Contact Us
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="contact col-md-12">
+            <h1 class="text-black-50">Contact Us</h1>
+        </div>
+        <hr class="w-100">
+        <div class="col-md-12 d-flex flex-column flex-lg-row">
+            <div class="col-md-3">
+                <img src="{% static 'images/contact-us_media-inq-icon.jpg' %}" width="100%" alt="mediacontactus">
+            </div>
+            <div class="col-md-6">
+                <form action="{% url 'create_profile_page' %}" method="post" class="col-md-12" enctype="multipart/form-data">
+                    {% csrf_token %}
+                   {{ form }}
+                    <div class="form-group ml-3">
+                        <button type="submit" class="btn btn-primary btn-block" value="Submit">submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

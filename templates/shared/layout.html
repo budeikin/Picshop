@@ -1,0 +1,28 @@
+{% load render_partial %}
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{% block title %}PicShop{% endblock %}</title>
+
+    {% block header_references %}{% endblock %}
+
+    {% include 'shared/includes/header_references.html' %}
+
+</head>
+<body>
+
+{% render_partial 'home_module.views.site_header_component' %}
+
+{% block content %}{% endblock %}
+
+
+</body>
+</html>

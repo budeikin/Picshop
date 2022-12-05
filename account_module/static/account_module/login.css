@@ -1,0 +1,11 @@
+.errorlist{
+    color: red;
+    list-style: none;
+}
+.errorlist li{
+    color: red;
+    list-style: none;
+}
+#loginbox{
+    margin: 100px auto;
+}
